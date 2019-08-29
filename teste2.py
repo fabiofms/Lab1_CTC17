@@ -1,7 +1,6 @@
-from AStar import AStar
-from BlocosDeslizantes import BlocosDeslizantes
-from GeneralSearch import GeneralSearch
-from Greedy import Greedy
+from classes.algorithms.AStar import AStar
+from classes.blocos_deslizantes.BlocosDeslizantes import BlocosDeslizantes
+from classes.GeneralSearch import GeneralSearch
 
 strategy = AStar()
 problem = BlocosDeslizantes(9, 30)

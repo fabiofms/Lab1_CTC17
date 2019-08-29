@@ -1,8 +1,6 @@
-from AStar import AStar
-from GeneralSearch import GeneralSearch
-from Greedy import Greedy
-from MenorCaminho import MenorCaminho
-from Romenia import Romenia
+from classes.GeneralSearch import GeneralSearch
+from classes.algorithms.Greedy import Greedy
+from classes.menor_caminho.MenorCaminho import MenorCaminho
 
 # MenorCaminho('Alice Springs', 'Yulara')
 # Romenia('Arad')

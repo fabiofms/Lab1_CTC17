@@ -1,6 +1,5 @@
 import math
 
-
 class Node:
     def __init__(self, id, city, dist_bucharest):
         self.id = int(id)
