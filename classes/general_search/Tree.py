@@ -1,4 +1,4 @@
-from classes.NodeTree import NodeTree
+from classes.general_search.NodeTree import NodeTree
 
 
 # class 'Tree': simulates the data structure tree

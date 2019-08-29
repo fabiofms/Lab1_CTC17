@@ -1,4 +1,4 @@
-from classes.Tree import Tree
+from classes.general_search.Tree import Tree
 
 
 # class 'GeneralSearch': simulates the data structure tree

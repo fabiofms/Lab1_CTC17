@@ -98,6 +98,12 @@ class State:
             self.move(movement_chosen, False)
         self.print_state()
 
+    def begin_with_values(self, values, empty_var):
+        self.empty = empty_var
+        for i in range(self.size):
+            for j in range(self.size):
+                self.state[i][j] = values[i][j]
+
     def print_state(self):
         for i in range(self.size):
             for j in range(self.size):

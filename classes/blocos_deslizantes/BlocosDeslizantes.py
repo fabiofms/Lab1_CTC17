@@ -2,10 +2,13 @@ from classes.blocos_deslizantes.State import State
 
 
 class BlocosDeslizantes:
-    def __init__(self, n, shuffle_repetitions):
+    def __init__(self, n, shuffle_repetitions, str, values=None, empty_var=None):
         self.size = n
         self.initial_state = State(n)
-        self.initial_state.shuffle(shuffle_repetitions)
+        if str == 'sh':
+            self.initial_state.shuffle(shuffle_repetitions)
+        elif str == 'iv':
+            self.initial_state.begin_with_values(values, empty_var)
         self.goal_state = State(n)
         self.older_states = []
         self.older_states.append(self.initial_state)
