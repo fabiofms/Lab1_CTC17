@@ -7,7 +7,7 @@ from classes.menor_caminho.Graph import Graph
 
 class MenorCaminho:
     def __init__(self, origin, destiny):
-        self.file_path = "australia.csv"
+        self.file_path = "data/australia.csv"
         self.graph = Graph(self.file_path)
         self.initial_state = self.graph.get_id_by_name(origin)
         self.goal_state = self.graph.get_id_by_name(destiny)
