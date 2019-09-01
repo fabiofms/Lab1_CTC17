@@ -32,7 +32,7 @@ class MenorCaminho:
         expanding_nodes = []
         for edge in node.get_edges():
             flag = True
-            cost = edge.get_distance() + chosen_candidate.get_cost()
+            cost = edge.get_distance()  # + chosen_candidate.get_cost()
             state = edge.get_destiny_id()
             for old_state in self.older_states:
                 if state == old_state:

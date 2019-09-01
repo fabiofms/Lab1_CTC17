@@ -6,7 +6,7 @@ from classes.menor_caminho.MenorCaminho import MenorCaminho
 # options to include in problem:
 #   - MenorCaminho('Alice Springs', 'Yulara')
 #   - Romenia('Arad')
-strategy = AStar()
+strategy = Greedy()
 problem = MenorCaminho('Alice Springs', 'Yulara')
 gs = GeneralSearch(problem, strategy)
 solution = gs.search()

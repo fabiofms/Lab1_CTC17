@@ -6,7 +6,6 @@ class AStar:
 
         # selecting the candidate (node trees) with the best heuristic and route
         for i in range(1, len(candidates)):
-            if (candidates[i].get_cost() + problem.heuristic(candidates[i])) < \
-                    (candidates[chosen_index].get_cost() + problem.heuristic(candidates[chosen_index])):
+            if (candidates[i].get_cost() + problem.heuristic(candidates[i])) < (candidates[chosen_index].get_cost() + problem.heuristic(candidates[chosen_index])):
                 chosen_index = i
         return chosen_index

@@ -40,7 +40,7 @@ empty_not_that_easy = [0, 8]
 # if 'str' is 'sh', than initial state is obtained by shuffling
 # if it is 'iv', it is obtained by passing initial values
 strategy = AStar()
-problem = BlocosDeslizantes(9, 35, str='iv', values=test_other, empty_var=empty_other)
+problem = BlocosDeslizantes(9, 35, str='iv', values=test_not_that_easy, empty_var=empty_not_that_easy)
 gs = GeneralSearch(problem, strategy)
 solution = gs.search()
 

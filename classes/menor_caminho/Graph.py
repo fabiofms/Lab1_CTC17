@@ -38,6 +38,7 @@ class Graph:
 
         def set_edges(node_a, node_b):
             distance = 1.1 * self.calculate_distance(node_a, node_b)
+            print(distance)
             if node_b not in node_a.get_neighbourhood():
                 node_a.add_edge(Edge(node_a, node_b, distance))
             if node_a not in node_b.get_neighbourhood():
@@ -63,7 +64,7 @@ class Graph:
     def calculate_distance(self, node, other_node):
         delta_lat = node.get_lat() - other_node.get_lat()
         delta_lng = node.get_lng() - other_node.get_lng()
-        return math.sqrt(math.pow(delta_lat,2) + math.pow(delta_lng,2))
+        return math.sqrt(delta_lat**2 + delta_lng**2)
 
     def get_id_by_name(self, name):
         return self.nodes_dictionary[name]
