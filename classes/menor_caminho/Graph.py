@@ -38,7 +38,6 @@ class Graph:
 
         def set_edges(node_a, node_b):
             distance = 1.1 * self.calculate_distance(node_a, node_b)
-            print(distance)
             if node_b not in node_a.get_neighbourhood():
                 node_a.add_edge(Edge(node_a, node_b, distance))
             if node_a not in node_b.get_neighbourhood():

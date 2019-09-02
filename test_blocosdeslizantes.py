@@ -40,14 +40,53 @@ empty_not_that_easy = [0, 8]
 # if 'str' is 'sh', than initial state is obtained by shuffling
 # if it is 'iv', it is obtained by passing initial values
 strategy = AStar()
-problem = BlocosDeslizantes(9, 35, str='iv', values=test_not_that_easy, empty_var=empty_not_that_easy)
+problem = BlocosDeslizantes(9, 35, str='iv', values=test_easy, empty_var=empty_easy)
 gs = GeneralSearch(problem, strategy)
 solution = gs.search()
 
-print('Solution:')
+print('Solution for Teste fácil - A Star:')
 for node in solution:
     node.get_state().print_state()
 print('Cost: ', solution[len(solution)-1].get_cost())
 print('Quantidade de passos: ', len(solution)-1)
+
+print()
+strategy = Greedy()
+problem = BlocosDeslizantes(9, 35, str='iv', values=test_easy, empty_var=empty_easy)
+gs = GeneralSearch(problem, strategy)
+solution = gs.search()
+
+print('Solution for Teste fácil - Greedy:')
+for node in solution:
+    node.get_state().print_state()
+print('Cost: ', solution[len(solution)-1].get_cost())
+print('Quantidade de passos: ', len(solution)-1)
+
+print()
+strategy = AStar()
+problem = BlocosDeslizantes(9, 35, str='iv', values=test_other, empty_var=empty_other)
+gs = GeneralSearch(problem, strategy)
+solution = gs.search()
+
+print('Solution for Teste próprio - A Star:')
+for node in solution:
+    node.get_state().print_state()
+print('Cost: ', solution[len(solution)-1].get_cost())
+print('Quantidade de passos: ', len(solution)-1)
+
+print()
+strategy = Greedy()
+problem = BlocosDeslizantes(9, 35, str='iv', values=test_other, empty_var=empty_other)
+gs = GeneralSearch(problem, strategy)
+solution = gs.search()
+
+print('Solution for Teste próprio - Greedy:')
+for node in solution:
+    node.get_state().print_state()
+print('Cost: ', solution[len(solution)-1].get_cost())
+print('Quantidade de passos: ', len(solution)-1)
+
+print()
+print('Exemplo não tão fácil não executado por incapacidade computacional de gerar resultado!')
 
 input()

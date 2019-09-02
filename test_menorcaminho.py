@@ -11,9 +11,23 @@ problem = MenorCaminho('Alice Springs', 'Yulara')
 gs = GeneralSearch(problem, strategy)
 solution = gs.search()
 
-print('Solution:')
+print('Solution for Greedy:')
 for node in solution:
     print(node.get_state(), end = ' ')
+print()
+print('Cost: ', solution[len(solution)-1].get_cost())
+print('Quantidade de passos: ', len(solution)-1)
+
+strategy = AStar()
+problem = MenorCaminho('Alice Springs', 'Yulara')
+gs = GeneralSearch(problem, strategy)
+solution = gs.search()
+
+print()
+print('Solution for A Star:')
+for node in solution:
+    print(node.get_state(), end = ' ')
+print()
 print('Cost: ', solution[len(solution)-1].get_cost())
 print('Quantidade de passos: ', len(solution)-1)
 
